@@ -12,7 +12,7 @@ from queue import Queue
 
 # PING SECTION
 hosts = [] #list of IP's that will be pinged
-port_list = (0,1024) # tests port 80 only
+port_list = (80) # 
 
 
 ip = input("Enter an IP to run the healthcheck on: ") # 'ip' will be taken in and added to list
@@ -67,7 +67,7 @@ for t in range(1):
 
 
 print("Open Ports: ", open_ports) # prints out all open ports list
-    
+
 
 
 
