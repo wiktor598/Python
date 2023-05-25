@@ -30,16 +30,23 @@ def P443(port):
     else:
         print("Port 443 Is Not Open")
 
+def P9443(port):
+    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    host = (ip, port)
+    result = sock.connect_ex(host) 
+    if result == 0:
+        print("Port 9443 Is Open")
+    else:
+        print("Port 9443 Is Not Open")
 
+    if __name__ == "__main__":
+            t1 = threading.Thread(target=P80, args=(80,))
+            t2 = threading.Thread(target=P443, args=(443,))
 
-if __name__ == "__main__":
-        t1 = threading.Thread(target=P80, args=(80,))
-        t2 = threading.Thread(target=P443, args=(443,))
+            t1.start()
+            t2.start()
 
-        t1.start()
-        t2.start()
-
-        t1.join()
-        t2.join()
+            t1.join()
+            t2.join()
 
       
