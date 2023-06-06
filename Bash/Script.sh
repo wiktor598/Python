@@ -7,3 +7,7 @@ read -p "Destination Path " Path
 
 scp ${file_path} ${user_name}@$Server_name:${Path}
 
+
+
+# test
+
