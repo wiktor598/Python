@@ -11,4 +11,3 @@ scp ${file_path} ${user_name}@$Server_name:${Path}
 
 # test
 
-sdcc
