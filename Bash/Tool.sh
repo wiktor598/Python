@@ -1,11 +1,10 @@
 #!/bin/bash
 
-echo "Choose your option: /n
 
-1) Option 1  /n
-2) Option 2  /n
-3) Option 3  /n
-4) Quit  /n "
+PS3='Please enter your choice: '
+options=("Option 1" "Option 2" "Option 3" "Quit")
+
+select option in "${options[@]}"
 
 
 
